@@ -1,0 +1,50 @@
+---
+interface Props {
+    mega: string,
+    valor: string,
+}
+
+const { mega, valor } = Astro.props;
+---
+<!-- PLANOS -->
+<div class="w-[270px] mt-10">
+    <!-- COLUNA -->
+    <div
+        class="h-[690px] w-[270px] bg-[url('./images/bg-column-table.png')] justify-start items-center flex flex-col"
+    >
+        <!-- MEGA -->
+        <div>
+            <h3 class="text-green text-5xl mt-12">
+                {mega}<span class="text-white">MB</span>
+            </h3>
+        </div>
+        <!-- Icones com texto -->
+        <div class=" -ml-12 mt-8">
+            <div class="flex items-center">
+                <img class="h-22" src="../../public/images/Icon-Wifi.svg" alt="Icon-personalizado" />
+                <span class="text-white text-sm">Wi-fi Premium</span>
+            </div>
+            <div class="flex items-center">
+                <img class="h-22" src="../../public/images/Icon-Wifi.svg" alt="Icon-personalizado" />
+                <span class="text-white text-sm">Wi-fi Premium</span>
+            </div>
+            <div class="flex items-center">
+                <img class="h-22" src="../../public/images/Icon-Wifi.svg" alt="Icon-personalizado" />
+                <span class="text-white text-sm">Wi-fi Premium</span>
+            </div>
+            <div class="flex items-center">
+                <img class="h-22" src="../../public/images/Icon-Wifi.svg" alt="Icon-personalizado" />
+                <span class="text-white text-sm">Wi-fi Premium</span>
+            </div>
+        </div>
+          <!-- FIM Icones com texto -->
+          <!-- VALOR DO PLANO -->
+        <h3 class="text-white text-5xl mt-12">
+            <span class="text-xs text-light-blue">R$</span>{valor}
+        </h3>
+         <!-- FIM VALOR DO PLANO -->
+         <button class="btn-assine mt-12">ASSINE JÁ</button>
+    </div>
+    <!-- FIM DA COLUNA -->
+</div>
+<!-- PLANOS -->

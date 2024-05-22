@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Banner from "../components/Banner.astro";
+import Planos from "../components/PlanosInternet.astro";
+import LottieFile from "../components/LottieFile.astro";
+import Faq from "../components/Faq.astro";
+import Box from "../components/Box.astro";
+---
+
+<Layout title="Internet Fibra Óptica">
+	<!-- Banner de vídeo -->
+	<Banner href="/videos/homeDesktop.mp4" />
+	<!-- FIM Banner de vídeo -->
+	<!-- Titulo -->
+	<div class="container-box">
+		<h2 class="tittle">Planos Residenciais</h2>
+		<img class="line" src="../../public/images/Line.png" alt="" />
+	</div>
+	<!-- FIM DO TITULO -->
+	<!-- Planos de Internet -->
+	<div class="flex flex-wrap gap-0 justify-around items-center px-[5%] mt-6">
+		<Planos mega="100" valor="99,90" />
+		<Planos mega="100" valor="99,90" />
+		<Planos mega="100" valor="99,90" />
+		<Planos mega="100" valor="99,90" />
+	</div>
+	<!-- FIM Planos de Internet -->
+	<!-- VANTAGENS -->
+	<div class="container-box">
+		<h2 class="tittle">Vantagens de se conectar com a gente</h2>
+		<img class="line" src="../../public/images/Line.png" alt="" />
+		<!-- LOTTIE -->
+		<div class="flex justify-around mt-4">
+			<LottieFile
+				href="/public/lotties/Rocket.json"
+				TextGreen="Premium"
+				TextWhite="Wi-fi"
+			/>
+			<LottieFile
+				href="/public/lotties/Television.json"
+				TextWhite="TV +100"
+				TextGreen=" Canais "
+			/>
+			<LottieFile
+				href="/public/lotties/Router.json"
+				TextGreen="última geração "
+				TextWhite="Roteador de"
+			/>
+		</div>
+		<!--FIM LOTTIE -->
+	</div>
+	<!-- FIM VANTAGENS -->
+	<!-- BANNER TV -->
+	<div class="mt-20">
+		<img src="../../public/images/BannerDesktopTV.png" alt="">
+	</div>
+	<!-- FIM BANNER TV -->
+	<!-- FAQ -->
+	<div class="container-box">
+		<h2 class="tittle">Tire suas dúvidas aqui</h2>
+		<img class="line" src="../../public/images/Line.png" alt="" />
+		<div>
+			<Faq />
+		</div>
+	</div>
+	<!-- FIM FAQ -->
+	<div class="container-box">
+		<img class="flex justify-center items-center" src="../../public/images/BannerAtend.png" alt="">
+	</div>
+	<!-- AUTOATENDIMENTO -->
+	<div class="container-box my-24">
+		<h2 class="tittle">Autoatendimento para clientes</h2>
+		<img class="line" src="../../public/images/Line.png" alt="" />
+		<div class="flex justify-around">
+			<Box 
+				href="#"
+				image="../../public/images/Icon-ticket.svg"
+				tittle="2° Via do boleto"
+			/>
+			<Box 
+				href="#"
+				image="../../public/images/Atendimento.svg"
+				tittle="Área do cliente"
+			/>
+			<Box 
+				href="#"
+				image="../../public/images/Speed.svg"
+				tittle="Teste de velocidade"
+			/>
+			<Box 
+				href="#"
+				image="../../public/images/Chat.svg"
+				tittle="Fale com o suporte"
+			/>
+		</div>
+	</div>
+	<!-- AUTOATENDIMENTO -->
+</Layout>

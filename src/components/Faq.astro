@@ -1,0 +1,48 @@
+---
+import LottieFile from "../components/LottieFile.astro";
+---
+<div class="w-full justify-center md:flex items-center md:flex-row wrap pt-12 mb-16">
+    <div class="md:w-[33%] w-[100%] items-center justify-center flex ">
+        <div class="content">
+            <span>Qual é a velocidade de internet que vocês oferecem?</span >
+            <p>Nossa empresa oferece uma variedade de planos de internet com diferentes velocidades para atender às necessidades de nossos clientes. Entre em contato conosco para saber mais sobre nossas opções de velocidade.</p>
+
+            <span>Vocês oferecem conexão de fibra óptica?</span>
+            <p>Sim, oferecemos conexão de fibra óptica em algumas áreas. Entre em contato conosco para verificar a disponibilidade em sua região.</p>
+
+            <span>Vocês oferecem suporte técnico em caso de problemas com a conexão?</span>
+            <p>Sim, oferecemos suporte técnico 24 horas por dia, 7 dias por semana, para ajudar nossos clientes em caso de problemas com a conexão. Você pode entrar em contato conosco por telefone, e-mail ou através de nossas redes sociais.</p>
+
+        </div>
+    </div>
+    <LottieFile
+				href="/public/lotties/Faq.json"
+				TextGreen=""
+				TextWhite=""
+			/>
+    <div class="md:w-[33%] w-[100%] items-center justify-center flex ">
+        <div class="content">
+            <span> Como faço para verificar a cobertura de internet em minha área?</span >
+            <p>Você pode verificar a cobertura de internet em sua área entrando em contato conosco ou visitando nosso site para usar nossa ferramenta de verificação de cobertura. Basta inserir seu endereço para saber quais serviços estão disponíveis em sua região.</p>
+
+            <span>Como posso entrar em contato com o suporte ao cliente em caso de dúvidas ou problemas?</span>
+            <p>Você pode entrar em contato com nosso suporte ao cliente ligando para nosso número de atendimento, enviando um e-mail ou nos enviando uma mensagem através de nossas redes sociais. Estamos sempre disponíveis para ajudar nossos clientes com qualquer dúvida ou problema que possam ter.</p>
+
+            <span>É possível realizar upgrades ou downgrades nos planos de internet?</span>
+            <p>Sim, você pode atualizar para um plano com velocidade maior ou diminuir para um plano com velocidade menor a qualquer momento. Entre em contato conosco para saber mais sobre os planos disponíveis e as opções de upgrade ou downgrade.</p>
+
+        </div>
+    </div>
+</div>
+<script>
+    const spans = document.querySelectorAll('.content span')
+
+    function ativo() {
+        // @ts-ignore
+        this.nextElementSibling.classList.toggle('active')
+    }
+
+    spans.forEach((item) =>{
+        item.addEventListener('click', ativo)
+    })
+</script>

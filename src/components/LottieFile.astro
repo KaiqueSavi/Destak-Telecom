@@ -1,0 +1,20 @@
+---
+
+
+interface Props {
+    href: string,
+    TextGreen: string,
+    TextWhite: string,
+}
+
+const { href, TextWhite, TextGreen } = Astro.props;
+---
+
+    
+        <!-- LOTTIE -->
+		<div class="w-[33%] items-center flex justify-center flex-col">
+			<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+			<dotlottie-player src={href} background="transparent" speed="1" style="width: 250px; height: 250px;" loop autoplay></dotlottie-player>
+			<h3 class="text-xl">{TextWhite} <span class="text-green">{TextGreen}</span></h3>
+		</div>
+		<!--FIM LOTTIE -->

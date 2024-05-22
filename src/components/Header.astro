@@ -1,0 +1,120 @@
+---
+interface Props {
+    logo: string;
+}
+
+const { logo } = Astro.props;
+---
+
+<header class="z-50 absolute top-0 left-0 w-full m-0">
+    <!-- HEADER-TOP -->
+    <div class="max-xl:hidden h-10 bg-gradient-to-r from-dark-blue to-light-blue z-50 px-[5%] flex items-center justify-between">
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-3">
+                <img src="/images/Whatsapp.svg" alt="">
+                <span class="text-white text-xs">(61) 99193-6935</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <img src="/images/map.svg" alt="">
+                <span class="text-white text-xs">Nova Gama- GO</span>
+            </div>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-3">
+                <img src="/images/Facebook.svg" alt="">
+            </div>
+            <div class="flex items-center gap-3">
+                <img src="/images/Instagram.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- FIM DO HEADER-TOP -->
+    <div class="px-[3%]">
+        <div
+        class="flex flex-wrap items-center justify-between max-lg:justify-around md:gap-5 relative z-99 w-full py-4 sm:px-10 bg-transparent min-h-[70px]"
+    >
+        <div class="flex justify-start">
+            <a href="/"><img src={logo} alt="logo" class="w-48" /> </a>
+        </div>
+        <div class="flex items-center gap-8">
+            <div class="flex lg:order-1 max-sm:ml-auto">
+                <a href="#" target="_blank"
+                    ><button
+                        class="btn-assine"
+                        >ASSINE JÁ</button
+                    ></a
+                >
+                <button
+                    onclick="showMenu()"
+                    id="toggle"
+                    class="md:hidden ml-7 bg-white p-1 rounded-md"
+                >
+                    <svg
+                        class="w-7 h-7"
+                        fill="#000"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+            <ul
+                id="collapseMenu"
+                class="hidden animate-fade lg:!flex lg:space-x-5 max-lg:space-y-2 rounded-md max-lg: bg-[#030F31] md:bg-transparent max-lg:py-4 max-lg:w-full"
+            >
+                <li
+                    class="lg:focus:text-light-blue max-lg:py-2 px-3 max-lg:rounded"
+                >
+                    <a
+                        href="/"
+                        class="lg:hover:text-light-blue duration-300 font- text-[white] max-lg:text-white block font-medium text-[13px]"
+                        >HOME</a
+                    >
+                </li>
+                <li class="max-lg:py-2 px-3 max-lg:rounded">
+                    <a
+                        href="/planosResidenciais"
+                        class="lg:hover:text-light-blue duration-300 text-white block font-medium text-[13px]"
+                        >PLANOS RESIDENCIAIS</a
+                    >
+                </li>
+                <li class="max-lg:py-2 px-3 max-lg:rounded">
+                    <a
+                        href="/planosEmpresariais"
+                        class="lg:hover:text-light-blue duration-300 text-white block font-medium text-[13px]"
+                        >PLANOS EMPRESARIAIS</a
+                    >
+                </li>
+                <li class="max-lg:py-2 px-3 max-lg:rounded">
+                    <a
+                        href="/fale-conosco"
+                        class="lg:hover:text-light-blue duration-300 text-white block font-medium text-[13px]"
+                        >FALE CONOSCO</a
+                    >
+                </li>
+                <li class="max-lg:py-2 px-3 max-lg:rounded">
+                    <a
+                        href="https://sgp.impactonetwork.com.br/accounts/central/login"
+                        target="_blank"
+                        class="lg:hover:text-light-blue duration-300 text-white block font-medium text-[13px]"
+                        >CENTRAL DO ASSINANTE</a
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <a href="#" target="_blank"><img class="fixed h-16 left-[80%] md:left-[95%] z-50 top-[85%] animate-bounce cursor-pointer" src="../../public/images/WhatsBtn.png" alt=""></a>
+</header>
+
+<script is:inline>
+    let menu = document.getElementById("collapseMenu");
+
+    function showMenu() {
+        menu.classList.toggle("hidden");
+    }
+</script>

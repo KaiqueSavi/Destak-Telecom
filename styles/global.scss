@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    @font-face {
+        font-family: 'Varien';
+        src: url("./fonts/Varien.otf") format("opentype");
+    }
+    @font-face {
+        font-family: 'VarienItalic';
+        font-style: italic;
+        src: url("./fonts/Varien-Italic.otf") format("opentype");
+    }
+    @font-face {
+        font-family: 'UniNeue';
+        src: url("./fonts/UniNeue-Trial-Regular.ttf") format("truetype");
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+        font-family: Varien, sans-serif;
+		background-image: url(../../public/images/Frame\ 4.png);
+		background-repeat: no-repeat;
+		padding: 0;
+		margin: 0;
+}
+
+.container {
+   @apply flex flex-wrap items-center justify-center w-full
+}
+
+.btn-assine {
+    @apply  px-12 py-2 text-sm rounded-xl hidden md:block font-medium text-dark-blue bg-green hover:bg-light-blue font-Varien transition-all ease-in-out duration-300
+}
+
+.tittle {
+    @apply text-white text-4xl flex justify-center max-lg:text-xl
+}
+
+.container-box{
+    @apply w-full px-[5%] mt-20 flex-col justify-center items-center max-lg:mt-28
+}
+
+.line {
+    @apply m-auto mt-4 max-xl:hidden
+}
+
+h3 {
+    @apply text-white text-[50px]
+}
+
+.content {
+    @apply md:w-[70%] w-[70%];
+  }
+  
+  .content span {
+    @apply text-white text-sm block cursor-pointer bg-[#ffffff2e] mt-7 rounded-2xl p-3 font-UniNeue;
+  }
+  
+  .content p {
+    @apply text-white text-xs font-UniNeue hidden animate-fade ml-3 mt-3 text-sm;
+  }
+  
+  .content p.active {
+    @apply block ;
+  }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: #020F56;
+    border-radius: 0px;
+}
+ 
+::-webkit-scrollbar-thumb{
+    background: #00C2FF;
+    border-radius: 30px;
+}

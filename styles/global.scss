@@ -32,6 +32,12 @@ body {
 		margin: 0;
 }
 
+@media screen and (max-width: 600px) {
+    body{
+        background-size: cover;
+    }
+}
+
 .container {
    @apply flex flex-wrap items-center justify-center w-full
 }
@@ -41,7 +47,7 @@ body {
 }
 
 .tittle {
-    @apply text-white text-4xl flex justify-center max-lg:text-xl
+    @apply text-white text-4xl flex justify-center max-lg:text-xl text-center
 }
 
 .container-box{

@@ -2,9 +2,10 @@
 interface Props {
     mega: string,
     valor: string,
+    NameTable: string
 }
 
-const { mega, valor } = Astro.props;
+const { mega, valor, NameTable } = Astro.props;
 ---
 <!-- PLANOS -->
 <div class="w-[270px] mt-10">
@@ -14,12 +15,17 @@ const { mega, valor } = Astro.props;
     >
         <!-- MEGA -->
         <div>
-            <h3 class="text-green text-5xl mt-12">
+            <h3 class="text-green text-5xl mt-12 mb-6">
                 {mega}<span class="text-white">MB</span>
             </h3>
         </div>
+        <!-- NOME DO PLANO -->
+        <div>
+            <span class="text-white">{NameTable}</span>
+        </div>
+        <!-- FIM NOME DO PLANO -->
         <!-- Icones com texto -->
-        <div class=" -ml-12 mt-8">
+        <div class=" -ml-12 mt-4">
             <div class="flex items-center">
                 <img class="h-22" src="../../public/images/Icon-Wifi.svg" alt="Icon-personalizado" />
                 <span class="text-white text-sm">Wi-fi Premium</span>
@@ -39,7 +45,7 @@ const { mega, valor } = Astro.props;
         </div>
           <!-- FIM Icones com texto -->
           <!-- VALOR DO PLANO -->
-        <h3 class="text-white text-5xl mt-12">
+        <h3 class="text-white text-5xl mt-8">
             <span class="text-xs text-light-blue">R$</span>{valor}
         </h3>
          <!-- FIM VALOR DO PLANO -->

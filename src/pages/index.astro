@@ -19,10 +19,9 @@ import Box from "../components/Box.astro";
 	<!-- FIM DO TITULO -->
 	<!-- Planos de Internet -->
 	<div class="flex flex-wrap gap-0 justify-around items-center px-[5%] mt-6">
-		<Planos mega="100" valor="99,90" />
-		<Planos mega="100" valor="99,90" />
-		<Planos mega="100" valor="99,90" />
-		<Planos mega="100" valor="99,90" />
+		<Planos mega="100" valor="99,90" NameTable="SMART MINI" />
+		<Planos mega="100" valor="99,90" NameTable="SMART PLUS" />
+		<Planos mega="100" valor="99,90" NameTable="SMART TOTAL" />
 	</div>
 	<!-- FIM Planos de Internet -->
 	<!-- VANTAGENS -->
@@ -30,7 +29,7 @@ import Box from "../components/Box.astro";
 		<h2 class="tittle">Vantagens de se conectar com a gente</h2>
 		<img class="line" src="../../public/images/Line.png" alt="" />
 		<!-- LOTTIE -->
-		<div class="flex justify-around mt-4">
+		<div class="flex justify-around mt-4 max-lg:flex-col">
 			<LottieFile
 				href="/public/lotties/Rocket.json"
 				TextGreen="Premium"
@@ -71,7 +70,7 @@ import Box from "../components/Box.astro";
 	<div class="container-box my-24">
 		<h2 class="tittle">Autoatendimento para clientes</h2>
 		<img class="line" src="../../public/images/Line.png" alt="" />
-		<div class="flex justify-around">
+		<div class="flex justify-around max-lg:flex-col max-lg:justify-center max-lg:items-center">
 			<Box 
 				href="#"
 				image="../../public/images/Icon-ticket.svg"

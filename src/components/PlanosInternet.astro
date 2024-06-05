@@ -3,9 +3,11 @@ interface Props {
     mega: string,
     valor: string,
     NameTable: string
+    canaisQtd: string
+    BrindeMega: string
 }
 
-const { mega, valor, NameTable } = Astro.props;
+const { mega, valor, NameTable, canaisQtd, BrindeMega } = Astro.props;
 ---
 <!-- PLANOS -->
 <div class="w-[270px] mt-10">
@@ -25,22 +27,22 @@ const { mega, valor, NameTable } = Astro.props;
         </div>
         <!-- FIM NOME DO PLANO -->
         <!-- Icones com texto -->
-        <div class=" -ml-12 mt-4">
+        <div class="-ml-6 mt-4">
             <div class="flex items-center">
                 <img class="h-22" src="../../public/images/Icon-Wifi.svg" alt="Icon-personalizado" />
                 <span class="text-white text-sm">Wi-fi Premium</span>
             </div>
             <div class="flex items-center">
                 <img class="h-22" src="../../public/images/Icon-Wifi.svg" alt="Icon-personalizado" />
-                <span class="text-white text-sm">Wi-fi Premium</span>
+                <span class="text-white text-sm">Ganhe +<b>{BrindeMega}</b>MB</span>
             </div>
             <div class="flex items-center">
                 <img class="h-22" src="../../public/images/Icon-Wifi.svg" alt="Icon-personalizado" />
-                <span class="text-white text-sm">Wi-fi Premium</span>
+                <span class="text-white text-sm">Suporte Premium</span>
             </div>
             <div class="flex items-center">
                 <img class="h-22" src="../../public/images/Icon-Wifi.svg" alt="Icon-personalizado" />
-                <span class="text-white text-sm">Wi-fi Premium</span>
+                <span class="text-white text-sm">{canaisQtd} Canais de TV</span>
             </div>
         </div>
           <!-- FIM Icones com texto -->
@@ -49,7 +51,10 @@ const { mega, valor, NameTable } = Astro.props;
             <span class="text-xs text-light-blue">R$</span>{valor}
         </h3>
          <!-- FIM VALOR DO PLANO -->
-         <button class="btn-assine mt-12">ASSINE JÁ</button>
+         <a href="https://api.whatsapp.com/send?phone=5561991936935&text=Ol%C3%A1!%20Vim%20do%20site" target="_blank" rel="noopener noreferrer">
+            <button class="btn-assine mt-12">ASSINE JÁ</button>
+        </a>
+
     </div>
     <!-- FIM DA COLUNA -->
 </div>

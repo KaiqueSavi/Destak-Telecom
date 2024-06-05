@@ -1,0 +1,32 @@
+---
+
+import LottieFile from "../components/LottieFile.astro";
+
+---
+
+
+<!-- VANTAGENS -->
+<div class="container-box">
+    <h2 class="tittle">Vantagens de se conectar com a gente</h2>
+    <img class="line" src="../../public/images/Line.png" alt="" />
+    <!-- LOTTIE -->
+    <div class="flex justify-around mt-4 max-lg:flex-col">
+        <LottieFile
+            href="/public/lotties/Rocket.json"
+            TextGreen="Premium"
+            TextWhite="Wi-fi"
+        />
+        <LottieFile
+            href="/public/lotties/Television.json"
+            TextWhite="TV +100"
+            TextGreen=" Canais "
+        />
+        <LottieFile
+            href="/public/lotties/Router.json"
+            TextGreen="última geração "
+            TextWhite="Roteador de"
+        />
+    </div>
+    <!--FIM LOTTIE -->
+</div>
+<!-- FIM VANTAGENS -->

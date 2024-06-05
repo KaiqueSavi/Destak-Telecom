@@ -10,10 +10,13 @@ const { logo } = Astro.props;
     <!-- HEADER-TOP -->
     <div class="max-xl:hidden h-10 bg-gradient-to-r from-dark-blue to-light-blue z-50 px-[5%] flex items-center justify-between">
         <div class="flex items-center gap-6">
-            <div class="flex items-center gap-3">
-                <img src="/images/Whatsapp.svg" alt="">
-                <span class="text-white text-xs">(61) 99193-6935</span>
-            </div>
+            <a href="https://api.whatsapp.com/send?phone=5561991936935&text=Ol%C3%A1!%20Vim%20do%20site" target="_blank" rel="noopener noreferrer">
+                <div class="flex items-center gap-3">
+                    <img src="/images/Whatsapp.svg" alt="">
+                    <span class="text-white text-xs">(61) 99193-6935</span>
+                </div>
+            </a>
+            
             <div class="flex items-center gap-3">
                 <img src="/images/map.svg" alt="">
                 <span class="text-white text-xs">Nova Gama- GO</span>
@@ -21,10 +24,12 @@ const { logo } = Astro.props;
         </div>
         <div class="flex items-center gap-6">
             <div class="flex items-center gap-3">
-                <img src="/images/Facebook.svg" alt="">
+                <a href="https://web.facebook.com/destaktelecomunicacoes" target="_blank" rel="noopener noreferrer"><img src="/images/Facebook.svg" alt=""></a>
             </div>
             <div class="flex items-center gap-3">
-                <img src="/images/Instagram.svg" alt="">
+                <a href="https://www.instagram.com/destak_telecom/" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/Instagram.svg" alt="">
+                </a>
             </div>
         </div>
     </div>
@@ -38,7 +43,7 @@ const { logo } = Astro.props;
         </div>
         <div class="flex items-center gap-8">
             <div class="flex lg:order-1 max-sm:ml-auto">
-                <a href="#" target="_blank"
+                <a href="https://api.whatsapp.com/send?phone=5561991936935&text=Ol%C3%A1!%20Vim%20do%20site" target="_blank"
                     ><button
                         class="btn-assine"
                         >ASSINE JÁ</button
@@ -77,16 +82,9 @@ const { logo } = Astro.props;
                 </li>
                 <li class="max-lg:py-2 px-3 max-lg:rounded">
                     <a
-                        href="/planosResidenciais"
+                        href="/planos"
                         class="lg:hover:text-light-blue duration-300 text-white block font-medium text-[13px]"
                         >PLANOS RESIDENCIAIS</a
-                    >
-                </li>
-                <li class="max-lg:py-2 px-3 max-lg:rounded">
-                    <a
-                        href="/planosEmpresariais"
-                        class="lg:hover:text-light-blue duration-300 text-white block font-medium text-[13px]"
-                        >PLANOS EMPRESARIAIS</a
                     >
                 </li>
                 <li class="max-lg:py-2 px-3 max-lg:rounded">

@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Internet Fibra Óptica">
+    <img class="mt-36" src="/images/Indique-e-Ganhe.png" alt="" />
+
+    <h2 class="mt-20 text-white font-bold text-center text-3xl">
+        INDIQUE AQUI
+    </h2>
+
+    <div class="px-[10%]">
+        <div
+            class="bg-gradient-to-tr from-light-blue/30 to-transparent rounded-xl w-full flex flex-wrap justify-center h-full py-12 mt-12"
+        >
+            <div>
+                <form class="flex flex-col justify-center" id="forms" action="">
+                    <h2 class="text-center text-white text-xl mb-6">
+                        Dados de quem vai indicar:
+                    </h2>
+
+                    <div class="flex md:flex-row gap-8 max-lg:flex-col">
+                        <input
+                            name='nome'
+                            id="nome"
+                            type="text"
+                            placeholder="Nome de quem vai indicar"
+                        />
+                        <input
+                            name="telefone"
+                            id="telefone"
+                            type="tel"
+                            placeholder="Telefone de quem vai indicar"
+                        />
+                        <input
+                            name="cpf"
+                            id="cpf"
+                            type="number"
+                            placeholder="CPF de quem vai indicar"
+                        />
+                    </div>
+
+                    <h2 class="text-center text-white text-xl mt-12 mb-6">
+                        Dados do indicado:
+                    </h2>
+
+                    <div class="flex md:flex-wrap gap-8 max-lg:flex-col">
+                        <input type="text" placeholder="Nome do indicado" />
+                        <input type="tel" placeholder="Telefone do indicado" />
+                        <input
+                            type="text"
+                            placeholder="Endereço do indicado"
+                        />
+                    </div>
+
+                    <button class="bg-green text-sm px-6 py-2 rounded-xl mt-12"
+                        >Indicar agora</button
+                    >
+
+                    <p id="message" class="hidden text-green text-sm mt-8 animate-fade">Obrigado por indicar um amigo, em breve entraremos em contato com você</p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<script is:inline>  
+
+    const form = document.getElementById('forms')
+
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        message.classList.remove('hidden');
+        
+        let formsOk = document.getElementById("formsOk");
+        formsOk.classList.remove("hidden");
+
+        const data = new FormData(e.target)
+
+        fetch("/api/data.json", {
+            method: "POST",
+            body: JSON.stringify({
+                nome: data.get("nome"),
+                telefone: data.get("telefone"),
+                cpf: data.get("cpf")
+            })
+        })
+    });
+
+</script>

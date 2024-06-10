@@ -91,3 +91,11 @@ h3 {
     background: #00C2FF;
     border-radius: 30px;
 }
+
+input {
+    @apply px-2 py-1 rounded-md
+}
+
+input::placeholder {
+    @apply text-xs
+}

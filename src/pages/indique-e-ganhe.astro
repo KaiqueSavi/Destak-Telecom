@@ -53,7 +53,7 @@ import Layout from "../layouts/Layout.astro";
                         />
                     </div>
 
-                    <button class="bg-green text-sm px-6 py-2 rounded-xl mt-12"
+                    <button id="button" class="bg-green text-sm px-6 py-2 rounded-xl mt-12"
                         >Indicar agora</button
                     >
 
@@ -65,30 +65,53 @@ import Layout from "../layouts/Layout.astro";
     </div>
 </Layout>
 
-<script is:inline>  
+<script is:inline>
+    const form = document.getElementById('forms');
+    const message = document.getElementById('message');
 
-    const form = document.getElementById('forms')
-
-    const message = document.getElementById("message");
-
-    form.addEventListener("submit", async (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        message.classList.remove('hidden');
-        
-        let formsOk = document.getElementById("formsOk");
-        formsOk.classList.remove("hidden");
+        const submitButton = document.getElementById("button");
+        submitButton.disabled = true
 
-        const data = new FormData(e.target)
+        const data = new FormData(e.target);
+        const jsonData = {
+            nome: data.get('nome'),
+            telefone: data.get('telefone'),
+            cpf: data.get('cpf'),
+            nomeIndicado: data.get('nomeIndicado'),
+            telefoneIndicado: data.get('telefoneIndicado'),
+            enderecoIndicado: data.get('enderecoIndicado'),
+        };
 
-        fetch("/api/data.json", {
-            method: "POST",
-            body: JSON.stringify({
-                nome: data.get("nome"),
-                telefone: data.get("telefone"),
-                cpf: data.get("cpf")
-            })
-        })
+        try {
+            const response = await fetch('/api/data.json', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(jsonData),
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                console.log('Success:', result);
+                message.textContent = 'Obrigado por indicar um amigo, em breve entraremos em contato com você';
+                message.classList.remove('hidden');
+            } else {
+                const errorData = await response.json();
+                console.error('Error:', errorData);
+                message.textContent = 'Ocorreu um erro ao enviar sua indicação. Por favor, tente novamente.';
+                message.classList.remove('hidden');
+                message.classList.add('text-red');
+            }
+        } catch (error) {
+            console.error('Network error:', error);
+            message.textContent = 'Ocorreu um erro ao enviar sua indicação. Por favor, tente novamente.';
+            message.classList.remove('hidden');
+            message.classList.add('text-red');
+        }
     });
-
 </script>

@@ -6,10 +6,10 @@ export const POST: APIRoute = async ({ params, request }) => {
     const url = 'https://delipe-mail-907e570e0648.herokuapp.com/send-mail';
 
     const emailData = {
-    "from": "'Destak | Indique e ganhe' <sites@delipe.com.br>",
+    "from": "'Destak | Indique e Ganhe' <sites@delipe.com.br>",
     "email": import.meta.env.SMTP_CLIENT_EMAIL,
     "subject": "Formulário de contato | Site",
-    "text": `Nome: ${body.nome}\nTelefone: ${body.telefone}\nCPF: ${body.cpf}\nNome do indicado: ${body.nomeIndicado}\nTelefone do Indicado: ${body.telefoneIndicado}\nEndereço do Indicado: ${body.enderecoIndicado}`,
+    "text": `Nome: ${body.nome}\nTelefone: ${body.telefone}\nCPF: ${body.cpf}\nNome do Indicado: ${body.nomeindicado}\nTelefone do Indicado: ${body.telind}\nEndereço do indicado: ${body.endind}`,
     "smtp": import.meta.env.SMTP_HASH
 
     };

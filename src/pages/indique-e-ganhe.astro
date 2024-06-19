@@ -35,7 +35,7 @@ import Layout from "../layouts/Layout.astro";
                         <input
                             name="cpf"
                             id="cpf"
-                            type="number"
+                            type="tel"
                             placeholder="CPF de quem vai indicar"
                         />
                     </div>
@@ -45,7 +45,7 @@ import Layout from "../layouts/Layout.astro";
                     </h2>
 
                     <div class="flex md:flex-wrap gap-8 max-lg:flex-col">
-                        <input name="nomeindicado" id="nomeindicado" type="text" placeholder="Nome do indicado" />
+                        <input name="nomeindicado" id="nomeindicado" type="text" placeholder="Nome Completo do indicado" />
                         <input name="telind" id="telind" placeholder="Telefone do indicado" />
                         <input
                             type="text"
@@ -67,6 +67,8 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <script is:inline>
+import { $ } from "../../dist/_worker.js/chunks/BannerTV_ClwWPwLB.mjs";
+
     const form = document.getElementById('forms');
     const message = document.getElementById('message');
 
@@ -94,3 +96,4 @@ import Layout from "../layouts/Layout.astro";
 
     });
 </script>
+

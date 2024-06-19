@@ -4,38 +4,38 @@ interface Props {
 }
 
 const { title } = Astro.props;
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import './../../styles/global.scss'
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "./../../styles/global.scss";
 ---
 
 <!doctype html>
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Planos de Internet feitos para você" />
+		<meta
+			name="description"
+			content="Planos de Internet feitos para você"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/images/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="./../../styles/global.scss">
+		<link rel="stylesheet" href="./../../styles/global.scss" />
 		<title>{title}</title>
 	</head>
 	<body>
 		<Header logo="/images/logo.png" />
 		<slot />
 		<Footer />
+		<script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"
+		></script>
+		<script is:inline src="/js/jquery.mask.min.js"></script>
+		<script is:inline>
+			$(document).ready(function () {
+				$("#telefone").mask("(00) 0 0000-0000");
+				$("#cpf").mask("000.000.000-00");
+				$("#telind").mask("(00) 0 0000-0000");
+			});
+		</script>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-</style>

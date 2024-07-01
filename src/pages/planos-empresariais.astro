@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BannerHome from "../components/BannerHome.astro";
+import IconText from '../components/IconText.astro'
+---
+
+<Layout title="Internet Fibra Óptica">
+
+    <img class="mt-32 max-lg:hidden" src="/images/Empresarial-desk.png" alt="">
+    <img class="mt-32 md:hidden" src="/images/Empresarial-mob.png" alt="">
+	
+    <div class="container-box mt-52">
+        <h2 class="tittle">Planos Empresariais</h2>
+        <img class="line" src="../../images/Line.png" alt="" />
+    </div>
+
+    
+    <div
+            class="flex md:flex-row gap-16 max-lg:flex-col mt-20 max-lg:justify-center max-lg:items-center px-[6%]"
+        >
+            <div class="md:w-[50%]">
+                <img class="rounded-lg" src="/images/Empresarial.jpg" alt="" />
+            </div>
+            <div
+                class="w-[70%] items-start flex flex-col justify-center max-lg:items-center max-lg:justify-center"
+            >
+                <h2 class="text-3xl text-secondary text-white font-bold max-lg:text-center">IMPULSIONE SEU NEGÓCIO</h2>
+                <span
+                    class="text-white text-base text-light max-lg:text-center font-UniNeue mt-8 mb-4 w-[80%]"
+                    >Descubra como a internet empresarial pode transformar o seu negócio. Com conexões rápidas e confiáveis, a internet empresarial oferece a infraestrutura necessária para impulsionar a produtividade, facilitar a comunicação instantânea e possibilitar a colaboração eficiente entre equipes, independentemente da localização. <br><br>Além disso, ela garante maior segurança de dados e suporte técnico especializado, permitindo que sua empresa opere de maneira fluida e eficaz. Conheça os benefícios da internet empresarial e prepare-se para o futuro digital.
+                </span>
+                <a href="https://api.whatsapp.com/send?phone=5561991936935&text=Ol%C3%A1!%20Vim%20do%20site" target="_blank" rel="noopener noreferrer">
+                    <button class="btn-assine mt-12">Não perca mais tempo! Clique aqui e saiba mais!</button>
+                </a>
+                    </div>
+        </div>
+</Layout>

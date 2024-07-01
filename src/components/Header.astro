@@ -41,11 +41,11 @@ const { logo } = Astro.props;
         <div class="flex justify-start">
             <a href="/"><img src={logo} alt="logo" class="w-48" /> </a>
         </div>
-        <div class="flex items-center gap-8">
+        <div class="flex items-center gap-8 ">
             <div class="flex lg:order-1 max-sm:ml-auto">
                 <a href="https://api.whatsapp.com/send?phone=5561991936935&text=Ol%C3%A1!%20Vim%20do%20site" target="_blank"
                     ><button
-                        class="btn-assine"
+                        class="btn-assine max-lg:hidden"
                         >ASSINE JÁ</button
                     ></a
                 >
@@ -71,20 +71,18 @@ const { logo } = Astro.props;
                 id="collapseMenu"
                 class="hidden animate-fade lg:!flex lg:space-x-5 max-lg:space-y-2 rounded-md max-lg:absolute max-lg:top-20 max-lg:left-0 max-lg:bg-[#030F31] md:bg-transparent max-lg:py-4 max-lg:w-full"
             >
-                <li
-                    class="lg:focus:text-light-blue max-lg:py-2 px-3 max-lg:rounded"
-                >
-                    <a
-                        href="/"
-                        class="lg:hover:text-light-blue duration-300 font- text-[white] max-lg:text-white block font-medium text-[13px]"
-                        >HOME</a
-                    >
-                </li>
                 <li class="max-lg:py-2 px-3 max-lg:rounded">
                     <a
                         href="/planos"
                         class="lg:hover:text-light-blue duration-300 text-white block font-medium text-[13px]"
                         >PLANOS RESIDENCIAIS</a
+                    >
+                </li>
+                <li class="max-lg:py-2 px-3 max-lg:rounded">
+                    <a
+                        href="/planos-empresariais"
+                        class="lg:hover:text-light-blue duration-300 text-white block font-medium text-[13px]"
+                        >EMPRESARIAL</a
                     >
                 </li>
                 <li class="max-lg:py-2 px-3 max-lg:rounded">
@@ -116,7 +114,7 @@ const { logo } = Astro.props;
     <a href="#" target="_blank"><img class="fixed h-16 left-[80%] md:left-[95%] z-50 top-[85%] animate-bounce cursor-pointer" src="../../images/WhatsBtn.png" alt=""></a>
 </header>
 
-<script is:inline>
+<script is:inline>  
     let menu = document.getElementById("collapseMenu");
 
     function showMenu() {

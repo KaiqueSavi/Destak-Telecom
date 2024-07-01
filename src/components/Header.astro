@@ -71,19 +71,16 @@ const { logo } = Astro.props;
                 id="collapseMenu"
                 class="hidden animate-fade lg:!flex lg:space-x-5 max-lg:space-y-2 rounded-md max-lg:absolute max-lg:top-20 max-lg:left-0 max-lg:bg-[#030F31] md:bg-transparent max-lg:py-4 max-lg:w-full"
             >
-                <li class="max-lg:py-2 px-3 max-lg:rounded">
+                <li class="relative group max-lg:py-2 px-3 max-lg:rounded">
                     <a
                         href="/planos"
                         class="lg:hover:text-light-blue duration-300 text-white block font-medium text-[13px]"
-                        >PLANOS RESIDENCIAIS</a
+                        >PLANOS de internet</a
                     >
-                </li>
-                <li class="max-lg:py-2 px-3 max-lg:rounded">
-                    <a
-                        href="/planos-empresariais"
-                        class="lg:hover:text-light-blue duration-300 text-white block font-medium text-[13px]"
-                        >EMPRESARIAL</a
-                    >
+                    <ul class="absolute left-0 animate-fade top-full hidden group-hover:block bg-white text-black space-y-2 p-2 rounded-md shadow-lg">
+                        <li><a href="/planos" class="block px-4 py-2 text-sm hover:bg-gray-200">Residencial</a></li>
+                        <li><a href="/planos-empresariais" class="block px-4 py-2 text-sm hover:bg-gray-200">Empresarial</a></li>
+                    </ul>
                 </li>
                 <li class="max-lg:py-2 px-3 max-lg:rounded">
                     <a

@@ -2,18 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import BannerHome from "../components/BannerHome.astro";
 import IconText from '../components/IconText.astro'
+import Box from "../components/Box.astro";
 ---
 
 <Layout title="Internet Fibra Óptica">
 
     <img class="mt-32 max-lg:hidden" src="/images/Empresarial-desk.png" alt="">
     <img class="mt-32 md:hidden" src="/images/Empresarial-mob.png" alt="">
-	
-    <div class="container-box mt-52">
-        <h2 class="tittle">Planos Empresariais</h2>
-        <img class="line" src="../../images/Line.png" alt="" />
-    </div>
-
     
     <div
             class="flex md:flex-row gap-16 max-lg:flex-col mt-20 max-lg:justify-center max-lg:items-center px-[6%]"
@@ -34,4 +29,22 @@ import IconText from '../components/IconText.astro'
                 </a>
                     </div>
         </div>
+
+        <h2 class="tittle mt-20">Vantagens</h2>
+        <img class="line" src="../../images/Line.png" alt="" />
+        <div class="px-[6%] flex flex-wrap justify-around max-lg:justify-center">
+
+            <Box href="https://api.whatsapp.com/send?phone=5561991936935&text=Ol%C3%A1!%20Vim%20do%20site" image="/images/servidor-dedicado.svg" tittle="Link dedicado" />
+            <Box href="https://api.whatsapp.com/send?phone=5561991936935&text=Ol%C3%A1!%20Vim%20do%20site" image="/images/endereco-de-ip.svg" tittle="IP fixo" />
+            <Box href="https://api.whatsapp.com/send?phone=5561991936935&text=Ol%C3%A1!%20Vim%20do%20site" image="/images/raio-trovao.svg" tittle="SLA de até 4h" />
+
+        </div>
+        <div class="px-[6%] flex flex-wrap justify-around max-lg:justify-center">
+
+            <Box href="https://api.whatsapp.com/send?phone=5561991936935&text=Ol%C3%A1!%20Vim%20do%20site" image="/images/upload-na-nuvem.svg" tittle="Velocidade simétrica" />
+            <Box href="https://api.whatsapp.com/send?phone=5561991936935&text=Ol%C3%A1!%20Vim%20do%20site" image="/images/6.svg" tittle="Wi-fi 6" />
+            <Box href="https://api.whatsapp.com/send?phone=5561991936935&text=Ol%C3%A1!%20Vim%20do%20site" image="/images/suporte-online.svg" tittle="Suporte e atendimento exclusivo" />
+
+        </div>
+
 </Layout>
